@@ -1,11 +1,18 @@
 package com.onevote;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.validation.constraints.NotNull;
 import java.util.Set;
 
+@Data
+@NoArgsConstructor
 public class Option extends BaseModel {
 
     private String id;
+
+    private String optionId;
 
     @NotNull
     private String name;
@@ -17,56 +24,6 @@ public class Option extends BaseModel {
 
     private Set<User> voter;
 
-    public Option() {}
+    private Integer count;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Boolean getActive() {
-        return isActive;
-    }
-
-    public void setActive(Boolean active) {
-        isActive = active;
-    }
-
-    public String getVoteId() {
-        return voteId;
-    }
-
-    public void setVoteId(String voteId) {
-        this.voteId = voteId;
-    }
-
-    public Set<User> getVoter() {
-        return voter;
-    }
-
-    public void setVoter(Set<User> voter) {
-        this.voter = voter;
-    }
-
-    @Override
-    public String toString() {
-        return "Option{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", isActive=" + isActive +
-                ", voteId='" + voteId + '\'' +
-                ", voter=" + voter +
-                '}';
-    }
 }
