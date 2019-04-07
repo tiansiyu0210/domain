@@ -5,6 +5,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
+import java.time.LocalDate;
 import java.util.Set;
 
 @Data
@@ -14,13 +15,17 @@ public class Vote extends BaseModel{
 
     private String id;
 
-    private String voteId;
-
     @NotNull
     private String title;
 
     private String note;
 
     private Set<Option> options;
+
+    private boolean isPublic;
+
+    private boolean isActive;
+
+    private LocalDate isExpire;
 
 }
