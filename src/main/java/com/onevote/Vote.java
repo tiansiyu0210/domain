@@ -22,10 +22,12 @@ public class Vote extends BaseModel{
 
     private Set<Option> options;
 
-    private boolean isPublic;
+    private boolean isPublic = true;
 
-    private boolean isActive;
+    private boolean isActive = true;
 
-    private LocalDate isExpire;
+    private boolean isExpire;
+
+    private LocalDate Expiration;
 
 }
