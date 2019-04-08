@@ -3,7 +3,7 @@ package com.onevote;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 public class BaseModel {
@@ -13,9 +13,9 @@ public class BaseModel {
     private User modifier;
 
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime createAt;
+    private Date createAt;
 
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime modifiedAt;
+    private Date modifiedAt;
 
 }

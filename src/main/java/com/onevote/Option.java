@@ -12,8 +12,6 @@ public class Option extends BaseModel {
 
     private String id;
 
-    private String optionId;
-
     @NotNull
     private String name;
 
