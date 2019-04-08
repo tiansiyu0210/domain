@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
+import java.util.Date;
 import java.util.Set;
 
 @Data
@@ -28,6 +28,6 @@ public class Vote extends BaseModel{
 
     private boolean isExpire;
 
-    private LocalDate Expiration;
+    private Date Expiration;
 
 }

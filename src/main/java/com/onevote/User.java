@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -17,24 +18,21 @@ import java.util.List;
 public class User {
     private String id;
 
-    private String userId;
-
     @NotNull
     private String name;
 
     private List<Role> roles;
 
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime createAt;
+    private Date createAt;
 
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime modifiedAt;
+    private Date modifiedAt;
 
     private String password;
 
     public User(User user) {
         this.id = user.getId();
-        this.userId = user.getUserId();
         this.name = user.getName();
         this.roles = user.getRoles();
         this.createAt = user.getCreateAt();
