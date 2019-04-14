@@ -20,7 +20,7 @@ public class Option extends BaseModel {
     @NotNull
     private String voteId;
 
-    private Set<User> voter;
+    private Set<String> voterNames;
 
     private Integer count;
 
