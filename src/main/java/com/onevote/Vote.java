@@ -28,6 +28,8 @@ public class Vote extends BaseModel{
 
     private boolean isExpire;
 
+    private boolean allowOthersCreateOption = true;
+
     private Date Expiration;
 
 }
